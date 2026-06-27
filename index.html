@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AOA Window Solutions LLC — premium windows and doors for Florida homes and businesses. 30+ years of combined experience. Free estimates."
+    />
+    <title>AOA Window Solutions LLC | Windows & Doors in Florida</title>
+    <link rel="icon" href="/assets/logo.jpg" />
+    <script>
+      (function () {
+        var stored = localStorage.getItem("aoa-theme");
+        var theme =
+          stored ||
+          (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="AOA Window Solutions home">
+          <img src="/assets/logo.jpg" alt="" width="140" height="42" data-logo />
+          <span class="brand-text">AOA</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#about"><span>01</span> About</a>
+          <a href="#products"><span>02</span> Products</a>
+          <div class="nav-dropdown">
+            <a href="#partners" class="nav-dropdown-trigger" aria-haspopup="true">
+              <span>03</span> Brands
+            </a>
+            <div class="nav-dropdown-menu" role="menu">
+              <a href="/brands/pgt.html" role="menuitem">PGT Custom Windows &amp; Doors</a>
+              <a href="/brands/es-windows.html" role="menuitem">ES (ES Windows)</a>
+              <a href="/brands/cgi.html" role="menuitem">CGI Windows &amp; Doors</a>
+              <a href="/brands/jeld-wen.html" role="menuitem">JELD-WEN</a>
+              <a href="/brands/viwinco.html" role="menuitem">Viwinco Windows</a>
+              <a href="/brands/origin.html" role="menuitem">Origin Windows &amp; Doors</a>
+              <a href="/brands/windoor.html" role="menuitem">WinDoor</a>
+              <a href="/brands/cws.html" role="menuitem">Custom Window Systems (CWS)</a>
+              <a href="/brands/euro-wall.html" role="menuitem">Euro-Wall</a>
+            </div>
+          </div>
+          <a href="#contact"><span>04</span> Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="header-phone" href="tel:8135280895">(813) 528-0895</a>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch to light mode"
+            data-theme-toggle
+          >
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+          <a class="btn btn-primary btn-sm" href="#contact">Free Estimate</a>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open menu"
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <nav aria-label="Mobile">
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <details class="mobile-brands">
+            <summary>Brands</summary>
+            <div class="mobile-brands-list">
+              <a href="#partners">All brands</a>
+              <a href="/brands/pgt.html">PGT</a>
+              <a href="/brands/es-windows.html">ES</a>
+              <a href="/brands/cgi.html">CGI</a>
+              <a href="/brands/jeld-wen.html">JELD-WEN</a>
+              <a href="/brands/viwinco.html">Viwinco</a>
+              <a href="/brands/origin.html">Origin</a>
+              <a href="/brands/windoor.html">WinDoor</a>
+              <a href="/brands/cws.html">CWS</a>
+              <a href="/brands/euro-wall.html">Euro-Wall</a>
+            </div>
+          </details>
+          <a href="#contact">Contact</a>
+          <a href="tel:8135280895">Eric — (813) 528-0895</a>
+          <a href="tel:8123205232">Trey — (812) 320-5232</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-heading">
+        <div class="hero-frame" aria-hidden="true">
+          <span class="frame-line frame-line--tl"></span>
+          <span class="frame-line frame-line--tr"></span>
+          <span class="frame-line frame-line--bl"></span>
+          <span class="frame-line frame-line--br"></span>
+        </div>
+
+        <div class="hero-media" aria-hidden="true" data-parallax>
+          <img
+            src="/assets/hero.jpg"
+            alt=""
+            width="1920"
+            height="1080"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero-scrim" aria-hidden="true"></div>
+
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="label scroll-in">Florida · Windows &amp; Doors</p>
+            <h1 id="hero-heading" class="hero-title">
+              <span class="line scroll-in" style="--i: 1">Transform</span>
+              <span class="line scroll-in" style="--i: 2">your space.</span>
+            </h1>
+            <p class="hero-lead scroll-in" style="--i: 3">
+              Cutting-edge products. Personalized service. 30+ years of combined
+              industry experience from founders who pick up the phone.
+            </p>
+            <div class="hero-actions scroll-in" style="--i: 4">
+              <a class="btn btn-primary" href="#contact">Get a free estimate</a>
+              <a class="btn btn-outline" href="tel:8135280895">(813) 528-0895</a>
+            </div>
+          </div>
+
+          <aside class="hero-metrics scroll-in" style="--i: 5" aria-label="Company highlights">
+            <div class="metric">
+              <span class="metric-value" data-count="30">30+</span>
+              <span class="metric-label">Years experience</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">10+</span>
+              <span class="metric-label">Brand partners</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">FL</span>
+              <span class="metric-label">Residential &amp; commercial</span>
+            </div>
+          </aside>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true">
+          <span>Scroll</span>
+          <span class="scroll-cue-line"></span>
+        </div>
+      </section>
+
+      <section class="section about" id="about" aria-labelledby="about-heading">
+        <div class="container section-shell">
+          <header class="section-intro scroll-reveal">
+            <p class="label">01 — Who we are</p>
+            <h2 id="about-heading">Built on experience.<br />Driven by vision.</h2>
+          </header>
+
+          <div class="about-layout">
+            <div class="about-copy scroll-reveal">
+              <p>
+                AOA Window Solutions LLC was founded by <strong>Eric Butler</strong> and
+                <strong>Trey Orbik</strong> with one goal: become Florida's leading provider
+                of high-quality windows and doors.
+              </p>
+              <p>
+                We deliver durable, energy-efficient solutions for residential and commercial
+                properties — exceeding expectations through exceptional products, personalized
+                service, and direct founder access.
+              </p>
+
+              <ul class="check-list">
+                <li class="scroll-reveal" style="--i: 0">Energy-efficient systems for Florida weather</li>
+                <li class="scroll-reveal" style="--i: 1">Residential &amp; commercial expertise</li>
+                <li class="scroll-reveal" style="--i: 2">Founders on every project — no call center</li>
+                <li class="scroll-reveal" style="--i: 3">Free estimates, honest guidance</li>
+              </ul>
+            </div>
+
+            <div class="about-media scroll-reveal">
+              <div class="media-frame" data-parallax-slow>
+                <img
+                  src="/assets/about.jpg"
+                  alt="Modern home with large windows overlooking water"
+                  width="720"
+                  height="900"
+                  loading="lazy"
+                />
+              </div>
+              <div class="founders-panel scroll-reveal">
+                <p class="label">Founders</p>
+                <div class="founder-row">
+                  <span>Eric Butler</span>
+                  <a href="tel:8135280895">(813) 528-0895</a>
+                </div>
+                <div class="founder-row">
+                  <span>Trey Orbik</span>
+                  <a href="tel:8123205232">(812) 320-5232</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section products" id="products" aria-labelledby="products-heading">
+        <div class="container section-shell">
+          <header class="section-intro section-intro--row scroll-reveal">
+            <div>
+              <p class="label">02 — What we offer</p>
+              <h2 id="products-heading">Products built<br />for Florida.</h2>
+            </div>
+            <p class="section-desc">
+              Impact-rated windows to elegant entry systems — sourced from industry-leading
+              manufacturers and matched to your project.
+            </p>
+          </header>
+        </div>
+
+        <div class="product-rail" data-product-rail>
+          <article class="product-panel scroll-reveal" style="--i: 0">
+            <span class="product-index">01</span>
+            <h3>Replacement Windows</h3>
+            <p>
+              Precision-fit replacements that upgrade comfort, efficiency, and curb appeal
+              for Florida's climate.
+            </p>
+          </article>
+          <article class="product-panel scroll-reveal" style="--i: 1">
+            <span class="product-index">02</span>
+            <h3>Entry &amp; Patio Doors</h3>
+            <p>
+              Sliding, French, and impact-rated door systems that connect indoor and outdoor
+              living.
+            </p>
+          </article>
+          <article class="product-panel scroll-reveal" style="--i: 2">
+            <span class="product-index">03</span>
+            <h3>Commercial Solutions</h3>
+            <p>
+              Large-scale fenestration for builders, property managers, and commercial clients.
+            </p>
+          </article>
+          <article class="product-panel scroll-reveal" style="--i: 3">
+            <span class="product-index">04</span>
+            <h3>Impact &amp; Hurricane Rated</h3>
+            <p>
+              Protection when it matters most — without sacrificing the look of your property.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section partners" id="partners" aria-labelledby="partners-heading">
+        <div class="container section-shell">
+          <header class="section-intro scroll-reveal">
+            <p class="label">03 — Trusted manufacturers</p>
+            <h2 id="partners-heading">Brands we stand behind.</h2>
+            <p class="section-desc">
+              Proven partners so every installation meets the standard your property deserves.
+              Click any logo to read the full brand profile.
+            </p>
+          </header>
+
+          <div class="partner-marquee scroll-reveal" aria-label="Partner brand logos">
+            <div class="partner-track">
+              <a class="partner-link" href="/brands/pgt.html" title="PGT Custom Windows &amp; Doors"><img src="/assets/partners/pgt.png" alt="PGT Industries" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/es-windows.html" title="ES Windows"><img src="/assets/partners/eswindows.png" alt="ES Windows" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/cgi.html" title="CGI Windows &amp; Doors"><img src="/assets/partners/cgi.jpg" alt="CGI" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/jeld-wen.html" title="JELD-WEN"><img src="/assets/partners/jeldwen.jpg" alt="Jeld-Wen" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/viwinco.html" title="Viwinco"><img src="/assets/partners/viwinco.png" alt="Viwinco" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/origin.html" title="Origin"><img src="/assets/partners/origin.webp" alt="Origin" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/windoor.html" title="WinDoor"><img src="/assets/partners/windoor.png" alt="WinDoor" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/cws.html" title="CWS"><img src="/assets/partners/cws.png" alt="CWS" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/euro-wall.html" title="Euro-Wall"><img src="/assets/partners/eurowall.jpg" alt="Euro Wall" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/pgt.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/pgt.png" alt="" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/es-windows.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/eswindows.png" alt="" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/cgi.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/cgi.jpg" alt="" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/jeld-wen.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/jeldwen.jpg" alt="" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/viwinco.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/viwinco.png" alt="" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/origin.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/origin.webp" alt="" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/windoor.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/windoor.png" alt="" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/cws.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/cws.png" alt="" loading="lazy" /></a>
+              <a class="partner-link" href="/brands/euro-wall.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/eurowall.jpg" alt="" loading="lazy" /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-heading">
+        <div class="container section-shell contact-shell">
+          <header class="section-intro scroll-reveal">
+            <p class="label">04 — Contact</p>
+            <h2 id="contact-heading">Start your project.</h2>
+            <p class="section-desc">
+              Tell us what you need — we'll follow up with a free estimate. Or call Eric or
+              Trey directly.
+            </p>
+          </header>
+
+          <div class="contact-layout">
+            <div class="contact-details scroll-reveal">
+              <div class="detail-block">
+                <span class="detail-label">Eric Butler</span>
+                <a class="detail-value" href="tel:8135280895">(813) 528-0895</a>
+              </div>
+              <div class="detail-block">
+                <span class="detail-label">Trey Orbik</span>
+                <a class="detail-value" href="tel:8123205232">(812) 320-5232</a>
+              </div>
+              <div class="detail-block">
+                <span class="detail-label">Hours</span>
+                <span class="detail-value">Mon–Fri · 9:00 AM – 5:00 PM</span>
+              </div>
+            </div>
+
+            <form class="contact-form scroll-reveal" id="estimate-form">
+              <h3 class="form-heading">Free estimate</h3>
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Windows, doors, timeline, property type…"
+                ></textarea>
+              </div>
+              <button class="btn btn-primary btn-full" type="submit">Send message</button>
+              <p class="form-note">Design preview — form not yet connected.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <img
+          class="footer-logo"
+          src="/assets/logo.jpg"
+          alt="AOA Window Solutions LLC"
+          width="120"
+          height="36"
+          loading="lazy"
+        />
+        <p>&copy; 2026 AOA Window Solutions LLC</p>
+        <p class="footer-note">Website redesign concept — draft for client review</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

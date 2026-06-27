@@ -1,0 +1,15 @@
+{
+  "name": "aoa-window-solutions-redesign",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Rough draft redesign for AOA Window Solutions LLC",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "brands": "node scripts/generate-brand-pages.mjs"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}
