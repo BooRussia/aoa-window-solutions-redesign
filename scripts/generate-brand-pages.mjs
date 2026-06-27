@@ -9,20 +9,20 @@ const brands = JSON.parse(readFileSync(join(__dirname, "brands-data.json"), "utf
 const brandLinks = brands
   .map(
     (b) =>
-      `              <a href="/brands/${b.slug}.html" role="menuitem">${b.name}</a>`
+      `              <a href="${b.slug}.html" role="menuitem">${b.name}</a>`
   )
   .join("\n");
 
 const mobileBrandLinks = brands
-  .map((b) => `          <a href="/brands/${b.slug}.html">${b.shortName}</a>`)
+  .map((b) => `          <a href="${b.slug}.html">${b.shortName}</a>`)
   .join("\n");
 
 function navHtml(isHome) {
-  const partnersHref = isHome ? "#partners" : "/#partners";
-  const aboutHref = isHome ? "#about" : "/#about";
-  const productsHref = isHome ? "#products" : "/#products";
-  const contactHref = isHome ? "#contact" : "/#contact";
-  const homeHref = isHome ? "#top" : "/";
+  const partnersHref = isHome ? "#partners" : "../#partners";
+  const aboutHref = isHome ? "#about" : "../#about";
+  const productsHref = isHome ? "#products" : "../#products";
+  const contactHref = isHome ? "#contact" : "../#contact";
+  const homeHref = isHome ? "#top" : "../";
 
   return `    <header class="site-header" data-header>
       <div class="container header-inner">
@@ -125,9 +125,9 @@ ${navHtml(false)}
       <article class="brand-article">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="/">Home</a>
+            <a href="../">Home</a>
             <span aria-hidden="true">/</span>
-            <a href="/#partners">Brands</a>
+            <a href="../#partners">Brands</a>
             <span aria-hidden="true">/</span>
             <span aria-current="page">${brand.shortName}</span>
           </nav>
@@ -195,7 +195,7 @@ ${navHtml(false)}
               </p>
               <p>
                 Ready to specify ${brand.shortName} on your project?
-                <a href="/#contact">Contact AOA Window Solutions</a> for a consultation.
+                <a href="../#contact">Contact AOA Window Solutions</a> for a consultation.
               </p>
             </section>
           </div>
@@ -205,7 +205,7 @@ ${navHtml(false)}
             <h2>Interested in ${brand.shortName}?</h2>
             <p>Talk to Eric or Trey about windows and doors for your Florida project.</p>
             <div class="brand-cta-actions">
-              <a class="btn btn-primary" href="/#contact">Free estimate</a>
+              <a class="btn btn-primary" href="../#contact">Free estimate</a>
               <a class="btn btn-outline" href="tel:8135280895">(813) 528-0895</a>
             </div>
             ${brand.website ? `<a class="brand-external" href="${brand.website}" target="_blank" rel="noopener noreferrer">Visit ${brand.shortName} official site ↗</a>` : ""}
@@ -218,7 +218,7 @@ ${navHtml(false)}
                 .filter((b) => b.slug !== brand.slug)
                 .map(
                   (b) =>
-                    `<a href="/brands/${b.slug}.html"><img src="${b.logo}" alt="${b.shortName}" loading="lazy" /><span>${b.shortName}</span></a>`
+                    `<a href="${b.slug}.html"><img src="${b.logo}" alt="${b.shortName}" loading="lazy" /><span>${b.shortName}</span></a>`
                 )
                 .join("\n              ")}
             </div>
