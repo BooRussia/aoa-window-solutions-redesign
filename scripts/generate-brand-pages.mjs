@@ -17,6 +17,8 @@ const mobileBrandLinks = brands
   .map((b) => `          <a href="${b.slug}.html">${b.shortName}</a>`)
   .join("\n");
 
+const SITE_URL = "https://boorussia.github.io/aoa-window-solutions-redesign";
+
 function navHtml(isHome) {
   const partnersHref = isHome ? "#partners" : "../#partners";
   const aboutHref = isHome ? "#about" : "../#about";
@@ -27,7 +29,7 @@ function navHtml(isHome) {
   return `    <header class="site-header" data-header>
       <div class="container header-inner">
         <a class="brand" href="${homeHref}" aria-label="AOA Window Solutions home">
-          <img src="/assets/logo.jpg" alt="" width="140" height="42" data-logo />
+          <img src="/assets/logo.svg" alt="" width="36" height="36" class="brand-icon" data-logo />
           <span class="brand-text">AOA</span>
         </a>
 
@@ -85,6 +87,8 @@ ${mobileBrandLinks}
 
 function brandPage(brand) {
   const metaDesc = `${brand.name} — founded ${brand.founded}. ${brand.specialty} Available through AOA Window Solutions in Florida. ${brand.tagline}.`;
+  const pageUrl = `${SITE_URL}/brands/${brand.slug}.html`;
+  const ogImage = brand.logo.startsWith("/") ? `${SITE_URL}${brand.logo}` : `${SITE_URL}/${brand.logo}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Brand",
@@ -101,7 +105,15 @@ function brandPage(brand) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="${metaDesc.replace(/"/g, "&quot;")}" />
     <title>${brand.name} | AOA Window Solutions — Florida Dealer</title>
-    <link rel="icon" href="/assets/logo.jpg" />
+    <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="${brand.name} | AOA Window Solutions — Florida Dealer" />
+    <meta property="og:description" content="${metaDesc.replace(/"/g, "&quot;")}" />
+    <meta property="og:image" content="${ogImage}" />
+    <meta property="og:url" content="${pageUrl}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${brand.name} | AOA Window Solutions" />
+    <meta name="twitter:description" content="${brand.specialty.replace(/"/g, "&quot;")}" />
     <script>
       (function () {
         var stored = localStorage.getItem("aoa-theme");
@@ -235,7 +247,7 @@ ${navHtml(false)}
       </div>
     </footer>
 
-    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>`;
 }

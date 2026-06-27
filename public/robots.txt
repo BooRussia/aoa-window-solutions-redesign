@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://boorussia.github.io/aoa-window-solutions-redesign/sitemap.xml

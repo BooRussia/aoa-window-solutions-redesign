@@ -1,0 +1,27 @@
+{
+  "headline": "Serving Florida homeowners, builders, and commercial clients.",
+  "subhead": "Residential projects across Central and West Florida. Commercial and high-rise work statewide.",
+  "regions": [
+    {
+      "name": "Tampa Bay",
+      "areas": ["Hillsborough", "Pinellas", "Pasco", "Manatee"]
+    },
+    {
+      "name": "Central Florida",
+      "areas": ["Orange", "Osceola", "Seminole", "Polk"]
+    },
+    {
+      "name": "Southwest Florida",
+      "areas": ["Sarasota", "Lee", "Collier", "Charlotte"]
+    },
+    {
+      "name": "North & Northeast",
+      "areas": ["Duval", "St. Johns", "Volusia", "Brevard"]
+    },
+    {
+      "name": "South Florida",
+      "areas": ["Miami-Dade", "Broward", "Palm Beach", "Monroe"]
+    }
+  ],
+  "note": "Don't see your county? Call us — we evaluate projects statewide, especially commercial and builder partnerships."
+}

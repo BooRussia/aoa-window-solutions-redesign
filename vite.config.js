@@ -18,6 +18,7 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        hurricane: resolve(__dirname, "hurricane-impact-windows.html"),
         ...brandPages,
       },
     },

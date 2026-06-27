@@ -1,0 +1,110 @@
+[
+  {
+    "id": "waterfront-estate",
+    "title": "Waterfront estate retrofit",
+    "location": "Tampa Bay, FL",
+    "category": "residential",
+    "tags": ["impact", "residential"],
+    "brand": "pgt",
+    "brandLabel": "PGT WinGuard",
+    "brandHref": "brands/pgt.html",
+    "image": "/assets/gallery/gallery-1.jpg",
+    "alt": "Luxury waterfront home with floor-to-ceiling impact windows"
+  },
+  {
+    "id": "coastal-replacement",
+    "title": "Whole-home window replacement",
+    "location": "Pinellas County, FL",
+    "category": "residential",
+    "tags": ["impact", "residential"],
+    "brand": "es-windows",
+    "brandLabel": "ES Windows",
+    "brandHref": "brands/es-windows.html",
+    "image": "/assets/gallery/gallery-2.jpg",
+    "alt": "Coastal home with new energy-efficient windows"
+  },
+  {
+    "id": "patio-opening",
+    "title": "Indoor-outdoor patio opening",
+    "location": "Sarasota, FL",
+    "category": "doors",
+    "tags": ["doors", "residential"],
+    "brand": "euro-wall",
+    "brandLabel": "Euro-Wall",
+    "brandHref": "brands/euro-wall.html",
+    "image": "/assets/gallery/gallery-3.jpg",
+    "alt": "Sliding glass wall connecting patio to living space"
+  },
+  {
+    "id": "high-rise-commercial",
+    "title": "High-rise fenestration package",
+    "location": "Miami, FL",
+    "category": "commercial",
+    "tags": ["impact", "commercial"],
+    "brand": "windoor",
+    "brandLabel": "WinDoor",
+    "brandHref": "brands/windoor.html",
+    "image": "/assets/gallery/gallery-4.jpg",
+    "alt": "Modern high-rise with impact-rated window wall"
+  },
+  {
+    "id": "custom-entry",
+    "title": "Custom entry door system",
+    "location": "Orlando, FL",
+    "category": "doors",
+    "tags": ["doors", "residential"],
+    "brand": "jeld-wen",
+    "brandLabel": "JELD-WEN",
+    "brandHref": "brands/jeld-wen.html",
+    "image": "/assets/gallery/gallery-5.jpg",
+    "alt": "Custom entry door on Florida residence"
+  },
+  {
+    "id": "hurricane-retrofit",
+    "title": "Hurricane retrofit — impact upgrade",
+    "location": "Fort Myers, FL",
+    "category": "residential",
+    "tags": ["impact", "residential"],
+    "brand": "cws",
+    "brandLabel": "CWS",
+    "brandHref": "brands/cws.html",
+    "image": "/assets/gallery/gallery-6.jpg",
+    "alt": "Impact-rated windows installed on Florida home"
+  },
+  {
+    "id": "multi-family",
+    "title": "Multi-family window package",
+    "location": "Jacksonville, FL",
+    "category": "commercial",
+    "tags": ["commercial"],
+    "brand": "cgi",
+    "brandLabel": "CGI",
+    "brandHref": "brands/cgi.html",
+    "image": "/assets/gallery/gallery-7.jpg",
+    "alt": "Multi-family building window installation"
+  },
+  {
+    "id": "bifold-luxury",
+    "title": "Luxury bi-fold door wall",
+    "location": "Naples, FL",
+    "category": "doors",
+    "tags": ["doors", "residential"],
+    "brand": "origin",
+    "brandLabel": "Origin",
+    "brandHref": "brands/origin.html",
+    "image": "/assets/gallery/gallery-8.jpg",
+    "alt": "Bi-fold doors opening to Florida pool deck"
+  },
+  {
+    "id": "builder-tract",
+    "title": "Production builder package",
+    "location": "Central Florida",
+    "category": "commercial",
+    "tags": ["commercial", "residential"],
+    "brand": "viwinco",
+    "brandLabel": "Viwinco",
+    "brandHref": "brands/viwinco.html",
+    "image": "/assets/gallery/gallery-9.jpg",
+    "alt": "New construction homes with vinyl window packages"
+  }
+]

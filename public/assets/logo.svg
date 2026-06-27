@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="AOA Window Solutions">
+  <rect width="120" height="120" rx="8" fill="#070809"/>
+  <g fill="none" stroke="#f2f4f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 78 L60 48 L96 78"/>
+    <path d="M34 78 L34 58 L86 58 L86 78"/>
+    <path d="M52 78 L52 64 L68 64 L68 78"/>
+    <path d="M60 64 L60 78"/>
+    <path d="M52 71 L68 71"/>
+    <path d="M18 88 L102 88"/>
+    <path d="M60 28 A32 32 0 0 1 92 60" opacity="0.9"/>
+  </g>
+</svg>
