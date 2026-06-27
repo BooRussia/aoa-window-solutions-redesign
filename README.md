@@ -11,6 +11,12 @@ npm run dev
 
 Open the URL shown in the terminal (usually `http://localhost:5173`).
 
+## Live site
+
+**https://boorussia.github.io/aoa-window-solutions-redesign/**
+
+Deployed automatically to GitHub Pages on every push to `main`.
+
 ## What's included
 
 - Modern single-page layout with hero, about, products, brand partners, and contact
