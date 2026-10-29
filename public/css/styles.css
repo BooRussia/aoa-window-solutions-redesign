@@ -687,38 +687,41 @@ body.menu-open {
   transition: background var(--dur-med) var(--ease-in-out);
 }
 
-/* Light mode shows the photo as-is — no white wash over it. The smaller hero
-   text sits on frosted chips instead so it stays readable over the photo. */
+/* Light mode: no tint over the photo. Instead the left side is progressively
+   blurred so the copy separates from the background. Two sibling layers (the
+   parent has no filter/mask so it doesn't become a backdrop root). */
 [data-theme="light"] .hero-scrim {
-  display: none;
+  background: none;
 }
 
-[data-theme="light"] .hero-lead,
-[data-theme="light"] .hero-trust li,
-[data-theme="light"] .hero-actions .btn-outline {
-  background: color-mix(in srgb, var(--bg) 80%, transparent);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
-  color: var(--text);
+[data-theme="light"] .hero-scrim::before,
+[data-theme="light"] .hero-scrim::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+[data-theme="light"] .hero-scrim::before {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 48%, transparent 78%);
+  mask-image: linear-gradient(90deg, #000 0%, #000 48%, transparent 78%);
+}
+
+[data-theme="light"] .hero-scrim::after {
+  -webkit-backdrop-filter: blur(28px);
+  backdrop-filter: blur(28px);
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 36%, transparent 62%);
+  mask-image: linear-gradient(90deg, #000 0%, #000 36%, transparent 62%);
 }
 
 [data-theme="light"] .hero-lead {
-  display: inline-block;
-  padding: 0.75rem 1rem;
-  border-radius: var(--radius-md);
+  color: var(--text);
+  font-weight: 500;
 }
 
-[data-theme="light"] .hero-trust li {
-  padding: 0.35rem 0.8rem 0.35rem 2rem;
-  border-radius: 999px;
-}
-
-[data-theme="light"] .hero-trust li::before {
-  left: 0.6rem;
-}
-
-[data-theme="light"] .hero-trust li::after {
-  left: 0.975rem;
+[data-theme="light"] .hero-trust {
+  color: var(--text);
 }
 
 .hero-frame {
@@ -3807,6 +3810,18 @@ select:focus,
       var(--scrim-heavy) 80%,
       var(--bg) 100%
     );
+  }
+
+  /* Copy spans the full width on phones, so blur the whole photo evenly */
+  [data-theme="light"] .hero-scrim::before {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  [data-theme="light"] .hero-scrim::after {
+    display: none;
   }
 
   .hero-actions .btn {
