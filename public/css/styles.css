@@ -687,6 +687,40 @@ body.menu-open {
   transition: background var(--dur-med) var(--ease-in-out);
 }
 
+/* Light mode shows the photo as-is — no white wash over it. The smaller hero
+   text sits on frosted chips instead so it stays readable over the photo. */
+[data-theme="light"] .hero-scrim {
+  display: none;
+}
+
+[data-theme="light"] .hero-lead,
+[data-theme="light"] .hero-trust li,
+[data-theme="light"] .hero-actions .btn-outline {
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  color: var(--text);
+}
+
+[data-theme="light"] .hero-lead {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+}
+
+[data-theme="light"] .hero-trust li {
+  padding: 0.35rem 0.8rem 0.35rem 2rem;
+  border-radius: 999px;
+}
+
+[data-theme="light"] .hero-trust li::before {
+  left: 0.6rem;
+}
+
+[data-theme="light"] .hero-trust li::after {
+  left: 0.975rem;
+}
+
 .hero-frame {
   position: absolute;
   inset: calc(var(--header-h) + 1.5rem) 1.25rem 5rem;
