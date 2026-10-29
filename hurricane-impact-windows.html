@@ -12,11 +12,18 @@
     <meta property="og:title" content="Hurricane Impact Windows in Florida | AOA Window Solutions" />
     <meta property="og:description" content="Understand HVHZ codes, impact-rated glass, and which brands meet Florida's strictest storm standards." />
     <meta property="og:image" content="https://boorussia.github.io/aoa-window-solutions-redesign/assets/hero.jpg" />
+    <link rel="canonical" href="https://boorussia.github.io/aoa-window-solutions-redesign/hurricane-impact-windows.html" />
+    <meta name="theme-color" content="#070809" />
     <script>
       (function () {
-        var stored = localStorage.getItem("aoa-theme");
+        var root = document.documentElement;
+        var stored = null;
+        try {
+          stored = localStorage.getItem("aoa-theme");
+        } catch (e) {}
         var theme = stored || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
-        document.documentElement.setAttribute("data-theme", theme);
+        root.setAttribute("data-theme", theme);
+        root.classList.add("js");
       })();
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,20 +32,100 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body class="brand-page content-page">
+    <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header is-scrolled" data-header>
+    <header class="site-header" data-header>
       <div class="container header-inner">
         <a class="brand" href="./" aria-label="AOA Window Solutions home">
-          <img src="/assets/logo.svg" alt="" width="36" height="36" class="brand-icon" />
-          <span class="brand-text">AOA</span>
+          <img src="/assets/logo.svg" alt="" width="36" height="36" class="brand-icon" data-logo />
+          <span class="brand-text"><strong>AOA</strong><small>Window Solutions</small></span>
         </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="./#about">About</a>
+          <a href="./#services">Services</a>
+          <a href="./#projects">Projects</a>
+          <a href="./#storm-ready">Storm-ready</a>
+          <div class="nav-dropdown">
+            <a href="./#brands" class="nav-dropdown-trigger" aria-haspopup="true">
+              Brands
+              <svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </a>
+            <div class="nav-dropdown-menu" role="menu">
+              <a href="brands/pgt.html" role="menuitem">PGT Custom Windows &amp; Doors</a>
+              <a href="brands/es-windows.html" role="menuitem">ES (ES Windows)</a>
+              <a href="brands/cgi.html" role="menuitem">CGI Windows &amp; Doors</a>
+              <a href="brands/jeld-wen.html" role="menuitem">JELD-WEN</a>
+              <a href="brands/viwinco.html" role="menuitem">Viwinco Windows</a>
+              <a href="brands/origin.html" role="menuitem">Origin Windows &amp; Doors</a>
+              <a href="brands/windoor.html" role="menuitem">WinDoor</a>
+              <a href="brands/cws.html" role="menuitem">Custom Window Systems (CWS)</a>
+              <a href="brands/euro-wall.html" role="menuitem">Euro-Wall</a>
+            </div>
+          </div>
+          <a href="./#faq">FAQ</a>
+        </nav>
+
         <div class="header-actions">
-          <a class="header-phone" href="tel:8135280895">(813) 528-0895</a>
-          <button class="theme-toggle" type="button" aria-label="Switch to light mode" data-theme-toggle>
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg>
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <a class="header-phone" href="tel:8135280895">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+            (813) 528-0895
+          </a>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch to light mode"
+            data-theme-toggle
+          >
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
           </button>
-          <a class="btn btn-primary btn-sm" href="./#contact">Free Estimate</a>
+          <a class="btn btn-primary btn-sm header-cta" href="./#contact">Free Estimate</a>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open menu"
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <nav aria-label="Mobile">
+          <a href="./#about">About</a>
+          <a href="./#services">Services</a>
+          <a href="./#projects">Projects</a>
+          <a href="./#storm-ready">Storm-ready</a>
+          <details class="mobile-brands">
+            <summary>Brands</summary>
+            <div class="mobile-brands-list">
+              <a href="./#brands">All brands</a>
+              <a href="brands/pgt.html">PGT</a>
+              <a href="brands/es-windows.html">ES</a>
+              <a href="brands/cgi.html">CGI</a>
+              <a href="brands/jeld-wen.html">JELD-WEN</a>
+              <a href="brands/viwinco.html">Viwinco</a>
+              <a href="brands/origin.html">Origin</a>
+              <a href="brands/windoor.html">WinDoor</a>
+              <a href="brands/cws.html">CWS</a>
+              <a href="brands/euro-wall.html">Euro-Wall</a>
+            </div>
+          </details>
+          <a href="./#faq">FAQ</a>
+          <a href="./#contact">Contact</a>
+        </nav>
+        <div class="mobile-menu-calls">
+          <a class="btn btn-outline" href="tel:8135280895">Call Eric</a>
+          <a class="btn btn-outline" href="tel:8123205232">Call Trey</a>
         </div>
       </div>
     </header>
@@ -106,7 +193,7 @@
           </section>
         </div>
 
-        <aside class="brand-cta">
+        <aside class="brand-cta scroll-reveal">
           <p class="label">Get a quote</p>
           <h2>Ready to upgrade?</h2>
           <p>Free estimate from founders who know Florida code inside and out.</p>
@@ -119,9 +206,51 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <img class="footer-logo" src="/assets/logo.svg" alt="AOA Window Solutions LLC" width="32" height="32" loading="lazy" />
-        <p>&copy; 2026 AOA Window Solutions LLC</p>
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="./" aria-label="AOA Window Solutions home">
+            <img src="/assets/logo.svg" alt="" width="36" height="36" class="brand-icon" data-logo loading="lazy" />
+            <span class="brand-text"><strong>AOA</strong><small>Window Solutions</small></span>
+          </a>
+          <p>Premium windows and doors for Florida homes and businesses — founder-led from estimate to install.</p>
+          <a class="btn btn-primary btn-sm" href="./#contact">Free estimate</a>
+        </div>
+        <nav class="footer-col" aria-label="Footer">
+          <p class="footer-heading">Explore</p>
+          <a href="./#about">About</a>
+          <a href="./#services">Services</a>
+          <a href="./#projects">Projects</a>
+          <a href="./#storm-ready">Storm-ready</a>
+          <a href="./#faq">FAQ</a>
+          <a href="hurricane-impact-windows.html" aria-current="page">Impact windows guide</a>
+        </nav>
+        <nav class="footer-col" aria-label="Brands">
+          <p class="footer-heading">Brands</p>
+          <a href="brands/pgt.html">PGT</a>
+          <a href="brands/es-windows.html">ES Windows</a>
+          <a href="brands/cgi.html">CGI</a>
+          <a href="brands/jeld-wen.html">JELD-WEN</a>
+          <a href="brands/viwinco.html">Viwinco</a>
+          <a href="brands/origin.html">Origin</a>
+          <a href="brands/windoor.html">WinDoor</a>
+          <a href="brands/cws.html">CWS</a>
+          <a href="brands/euro-wall.html">Euro-Wall</a>
+        </nav>
+        <div class="footer-col">
+          <p class="footer-heading">Talk to a founder</p>
+          <a href="tel:8135280895">Eric Butler · (813) 528-0895</a>
+          <a href="tel:8123205232">Trey Orbik · (812) 320-5232</a>
+          <p>Mon–Fri · 9 AM – 5 PM ET</p>
+          <p>Serving homeowners, builders &amp; commercial clients across Florida</p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; <span data-year>2026</span> AOA Window Solutions LLC</p>
+        <p class="footer-note">Website redesign — draft for client review</p>
+        <a class="footer-top" href="#main">
+          Back to top
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
+        </a>
       </div>
     </footer>
 

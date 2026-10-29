@@ -8,7 +8,7 @@
     "brand": "pgt",
     "brandLabel": "PGT WinGuard",
     "brandHref": "brands/pgt.html",
-    "image": "/assets/gallery/gallery-1.jpg",
+    "image": "assets/gallery/gallery-1.jpg",
     "alt": "Luxury waterfront home with floor-to-ceiling impact windows"
   },
   {
@@ -20,7 +20,7 @@
     "brand": "es-windows",
     "brandLabel": "ES Windows",
     "brandHref": "brands/es-windows.html",
-    "image": "/assets/gallery/gallery-2.jpg",
+    "image": "assets/gallery/gallery-2.jpg",
     "alt": "Coastal home with new energy-efficient windows"
   },
   {
@@ -32,7 +32,7 @@
     "brand": "euro-wall",
     "brandLabel": "Euro-Wall",
     "brandHref": "brands/euro-wall.html",
-    "image": "/assets/gallery/gallery-3.jpg",
+    "image": "assets/gallery/gallery-3.jpg",
     "alt": "Sliding glass wall connecting patio to living space"
   },
   {
@@ -44,7 +44,7 @@
     "brand": "windoor",
     "brandLabel": "WinDoor",
     "brandHref": "brands/windoor.html",
-    "image": "/assets/gallery/gallery-4.jpg",
+    "image": "assets/gallery/gallery-4.jpg",
     "alt": "Modern high-rise with impact-rated window wall"
   },
   {
@@ -56,7 +56,7 @@
     "brand": "jeld-wen",
     "brandLabel": "JELD-WEN",
     "brandHref": "brands/jeld-wen.html",
-    "image": "/assets/gallery/gallery-5.jpg",
+    "image": "assets/gallery/gallery-5.jpg",
     "alt": "Custom entry door on Florida residence"
   },
   {
@@ -68,7 +68,7 @@
     "brand": "cws",
     "brandLabel": "CWS",
     "brandHref": "brands/cws.html",
-    "image": "/assets/gallery/gallery-6.jpg",
+    "image": "assets/gallery/gallery-6.jpg",
     "alt": "Impact-rated windows installed on Florida home"
   },
   {
@@ -80,7 +80,7 @@
     "brand": "cgi",
     "brandLabel": "CGI",
     "brandHref": "brands/cgi.html",
-    "image": "/assets/gallery/gallery-7.jpg",
+    "image": "assets/gallery/gallery-7.jpg",
     "alt": "Multi-family building window installation"
   },
   {
@@ -92,7 +92,7 @@
     "brand": "origin",
     "brandLabel": "Origin",
     "brandHref": "brands/origin.html",
-    "image": "/assets/gallery/gallery-8.jpg",
+    "image": "assets/gallery/gallery-8.jpg",
     "alt": "Bi-fold doors opening to Florida pool deck"
   },
   {
@@ -104,7 +104,7 @@
     "brand": "viwinco",
     "brandLabel": "Viwinco",
     "brandHref": "brands/viwinco.html",
-    "image": "/assets/gallery/gallery-9.jpg",
+    "image": "assets/gallery/gallery-9.jpg",
     "alt": "New construction homes with vinyl window packages"
   }
 ]

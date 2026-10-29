@@ -26,7 +26,9 @@
       "Largest U.S. manufacturer of impact-resistant windows and doors",
       "In-house glass laminating and tempering in Florida",
       "Miami-Dade NOA certified product lines"
-    ]
+    ],
+    "bestFor": "Impact windows & doors for every Florida code zone",
+    "fit": ["hvhz", "coastal", "windows", "doors", "commercial"]
   },
   {
     "slug": "es-windows",
@@ -55,7 +57,9 @@
       "Parent company Tecnoglass listed on NYSE",
       "6.2M sq. ft. integrated plant in Barranquilla, Colombia",
       "U.S. headquarters and showrooms in Florida"
-    ]
+    ],
+    "bestFor": "Architectural and high-rise impact systems",
+    "fit": ["hvhz", "coastal", "windows", "commercial"]
   },
   {
     "slug": "cgi",
@@ -84,7 +88,9 @@
       "Early Miami-Dade County impact approval",
       "Architectural aluminum windows and doors",
       "Part of the PGT Innovations / Miter Brands family"
-    ]
+    ],
+    "bestFor": "Clean-lined aluminum impact windows & doors",
+    "fit": ["hvhz", "coastal", "windows", "doors"]
   },
   {
     "slug": "jeld-wen",
@@ -113,7 +119,9 @@
       "120+ manufacturing facilities globally",
       "NYSE-listed (JELD)",
       "Wood, vinyl, and aluminum product lines"
-    ]
+    ],
+    "bestFor": "Broad catalog of windows and entry doors",
+    "fit": ["inland", "windows", "doors", "commercial"]
   },
   {
     "slug": "viwinco",
@@ -142,7 +150,9 @@
       "In-house glass laminating and tempering",
       "Impact and non-impact vinyl systems",
       "Serves Eastern U.S. including Central Florida"
-    ]
+    ],
+    "bestFor": "Custom vinyl, impact and non-impact",
+    "fit": ["inland", "coastal", "windows"]
   },
   {
     "slug": "origin",
@@ -171,7 +181,9 @@
       "Custom aluminum bi-fold doors and windows",
       "20-year guarantee on select products",
       "Made-to-order with extensive customization"
-    ]
+    ],
+    "bestFor": "Bi-fold doors and slim-profile windows",
+    "fit": ["inland", "coastal", "doors"]
   },
   {
     "slug": "windoor",
@@ -200,7 +212,9 @@
       "Manufactured in Orlando, Florida",
       "Industry-leading large-format impact openings",
       "Part of the PGT Innovations / Miter Brands family"
-    ]
+    ],
+    "bestFor": "Luxury oversized impact openings",
+    "fit": ["hvhz", "coastal", "doors", "commercial"]
   },
   {
     "slug": "cws",
@@ -229,7 +243,9 @@
       "First FL manufacturer with ENERGY STAR HVHZ rating",
       "700,000+ sq. ft. of in-state manufacturing",
       "Vinyl and aluminum impact product lines"
-    ]
+    ],
+    "bestFor": "Florida-built impact with ENERGY STAR performance",
+    "fit": ["hvhz", "coastal", "inland", "windows"]
   },
   {
     "slug": "euro-wall",
@@ -258,6 +274,8 @@
       "American-made folding and sliding wall systems",
       "Miami-Dade and HVHZ impact-rated options",
       "Large-format panels up to 16-1/2 feet"
-    ]
+    ],
+    "bestFor": "Folding, multi-slide, and pivot glass walls",
+    "fit": ["hvhz", "coastal", "doors"]
   }
 ]

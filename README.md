@@ -21,22 +21,28 @@ Deployed automatically to GitHub Pages on every push to `main`.
 
 ### Homepage
 
-- Hero, about, products, brand partners marquee, and contact
-- **How we work** — 4-step founder-led process timeline
-- **Project gallery** — filterable grid with lightbox (placeholder Florida imagery)
-- **Hurricane & impact authority** — Florida storm-code guidance + standalone SEO guide
-- **Service area** — regions and counties with `LocalBusiness` JSON-LD schema
-- **Testimonials** — carousel with draft placeholders (swap when client provides reviews)
-- **FAQ** — accordion for common Florida window buyer questions
-- **Working contact form** via [FormSubmit](https://formsubmit.co/) with inline success/error states
-- **Sticky mobile CTA** — Call + Free Estimate bar (hides near contact section)
-- Light/dark theme toggle, scroll progress, parallax hero
+- **Hero** with a live hurricane-season chip (days left / days until June 1), trust points, and count-up metrics
+- **Brand logo strip** right under the hero, linking to each brand profile
+- **About** with one-tap founder call cards
+- **Services** — four product cards; each "Estimate my…" link pre-selects that project type in the form
+- **How we work** — connected 4-step founder-led timeline
+- **Project gallery** — filterable grid (with counts) and a lightbox with prev/next, arrow keys, and swipe
+- **Storm-ready** — hurricane-season tracker (season band, peak window, "today" marker) plus code guidance
+- **Brand grid** — every manufacturer with "best for", founding year, and HQ
+- **Testimonials** — swipeable carousel with dots (draft placeholders until real reviews arrive)
+- **FAQ** — accordion, with `FAQPage` structured data for search
+- **Service area + storm-code check** — tap a county to see its code zone (HVHZ / wind-borne debris / inland), install-time guidance, and suggested brands; "Send this to Eric & Trey" pre-fills the form
+- **Estimate form** via [FormSubmit](https://formsubmit.co/) — name, phone, email, city/ZIP, project-type chips, timeline, inline validation, spam honeypot, and a success state
+- **Open-now status** (Mon–Fri 9–5 Eastern) next to the hours
+- **Sticky mobile CTA** — Call + Free Estimate bar (hides near the contact section)
+- Teal accent on the light/dark themes, scroll progress, parallax hero, reduced-motion support
 
 ### Brand & SEO pages
 
 - **9 SEO brand profile pages** with company history, manufacturing, taglines, and Florida relevance
 - **Hurricane impact windows guide** at `/hurricane-impact-windows.html`
-- Open Graph + Twitter meta on homepage and brand pages
+- Shared header, mobile menu, and footer across every page
+- Open Graph + Twitter meta and canonical URLs on all pages; `BreadcrumbList` schema on brand pages
 - `sitemap.xml` and `robots.txt` in `public/`
 - SVG favicon / header icon (`public/assets/logo.svg`)
 
@@ -53,12 +59,14 @@ Leads are sent through FormSubmit to the address in `src/site-config.js` (`FORM_
 | Content | File |
 |---------|------|
 | Gallery projects | `scripts/gallery-data.json` |
-| Testimonials | `scripts/testimonials-data.json` |
-| Service regions | `scripts/service-area.json` |
+| Testimonials | `scripts/testimonials-data.json` (set `"draft": false` on real reviews) |
+| Service regions + storm-code zones | `scripts/service-area.json` (`codeZones` lists HVHZ and inland counties; every other county is treated as coastal) |
 | FAQ | `scripts/faq-data.json` |
 | Brand profiles | `scripts/brands-data.json` → run `npm run brands` |
 
-Gallery images live in `public/assets/gallery/`. Update paths in `gallery-data.json` when replacing placeholders.
+Gallery images live in `public/assets/gallery/`. Paths in `gallery-data.json` are relative (`assets/gallery/…`) so they work under the GitHub Pages sub-path.
+
+Each brand in `brands-data.json` has a `bestFor` line (shown on the brand grid) and a `fit` list (`hvhz`, `coastal`, `inland`, `windows`, `doors`, `commercial`) that the storm-code check uses to suggest brands.
 
 ## Brand pages
 
@@ -96,6 +104,7 @@ Walk through in this order:
 2. Trust — founders, process, gallery (placeholders → their photos)
 3. Expertise — brand dropdown, hurricane section, one brand page
 4. Action — working form, click-to-call, mobile CTA
-5. Roadmap — quote calculator, live Google reviews, custom domain
+5. Storm-code check — tap a county, then "Send this to Eric & Trey"
+6. Roadmap — real project photos and reviews, live Google reviews, custom domain
 
 Ask Eric/Trey to confirm: service area counties, form inbox email, and which projects to feature first.

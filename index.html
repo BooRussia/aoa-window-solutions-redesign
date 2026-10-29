@@ -2,14 +2,16 @@
 <html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta
       name="description"
-      content="AOA Window Solutions LLC — premium windows and doors for Florida homes and businesses. 30+ years of combined experience. Free estimates."
+      content="AOA Window Solutions LLC — premium impact windows and doors for Florida homes and businesses. 30+ years of combined experience. Free, founder-led estimates."
     />
     <title>Impact Windows &amp; Doors Florida | AOA Window Solutions LLC</title>
+    <link rel="canonical" href="https://boorussia.github.io/aoa-window-solutions-redesign/" />
     <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/assets/logo.jpg" />
+    <meta name="theme-color" content="#070809" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="AOA Window Solutions — Impact Windows &amp; Doors in Florida" />
     <meta property="og:description" content="Premium windows and doors for Florida homes and businesses. 30+ years combined experience. Free estimates from founders Eric Butler and Trey Orbik." />
@@ -46,11 +48,16 @@
     </script>
     <script>
       (function () {
-        var stored = localStorage.getItem("aoa-theme");
+        var root = document.documentElement;
+        var stored = null;
+        try {
+          stored = localStorage.getItem("aoa-theme");
+        } catch (e) {}
         var theme =
           stored ||
           (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
-        document.documentElement.setAttribute("data-theme", theme);
+        root.setAttribute("data-theme", theme);
+        root.classList.add("js");
       })();
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -70,15 +77,18 @@
       <div class="container header-inner">
         <a class="brand" href="#top" aria-label="AOA Window Solutions home">
           <img src="/assets/logo.svg" alt="" width="36" height="36" class="brand-icon" data-logo />
-          <span class="brand-text">AOA</span>
+          <span class="brand-text"><strong>AOA</strong><small>Window Solutions</small></span>
         </a>
 
         <nav class="nav" aria-label="Primary">
-          <a href="#about"><span>01</span> About</a>
-          <a href="#products"><span>02</span> Products</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#storm-ready">Storm-ready</a>
           <div class="nav-dropdown">
-            <a href="#partners" class="nav-dropdown-trigger" aria-haspopup="true">
-              <span>03</span> Brands
+            <a href="#brands" class="nav-dropdown-trigger" aria-haspopup="true">
+              Brands
+              <svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
             </a>
             <div class="nav-dropdown-menu" role="menu">
               <a href="brands/pgt.html" role="menuitem">PGT Custom Windows &amp; Doors</a>
@@ -92,11 +102,14 @@
               <a href="brands/euro-wall.html" role="menuitem">Euro-Wall</a>
             </div>
           </div>
-          <a href="#contact"><span>04</span> Contact</a>
+          <a href="#faq">FAQ</a>
         </nav>
 
         <div class="header-actions">
-          <a class="header-phone" href="tel:8135280895">(813) 528-0895</a>
+          <a class="header-phone" href="tel:8135280895">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+            (813) 528-0895
+          </a>
           <button
             class="theme-toggle"
             type="button"
@@ -111,7 +124,7 @@
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
             </svg>
           </button>
-          <a class="btn btn-primary btn-sm" href="#contact">Free Estimate</a>
+          <a class="btn btn-primary btn-sm header-cta" href="#contact">Free Estimate</a>
           <button
             class="menu-toggle"
             type="button"
@@ -128,11 +141,13 @@
       <div class="mobile-menu" id="mobile-menu" hidden>
         <nav aria-label="Mobile">
           <a href="#about">About</a>
-          <a href="#products">Products</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#storm-ready">Storm-ready</a>
           <details class="mobile-brands">
             <summary>Brands</summary>
             <div class="mobile-brands-list">
-              <a href="#partners">All brands</a>
+              <a href="#brands">All brands</a>
               <a href="brands/pgt.html">PGT</a>
               <a href="brands/es-windows.html">ES</a>
               <a href="brands/cgi.html">CGI</a>
@@ -144,10 +159,13 @@
               <a href="brands/euro-wall.html">Euro-Wall</a>
             </div>
           </details>
+          <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
-          <a href="tel:8135280895">Eric — (813) 528-0895</a>
-          <a href="tel:8123205232">Trey — (812) 320-5232</a>
         </nav>
+        <div class="mobile-menu-calls">
+          <a class="btn btn-outline" href="tel:8135280895">Call Eric</a>
+          <a class="btn btn-outline" href="tel:8123205232">Call Trey</a>
+        </div>
       </div>
     </header>
 
@@ -165,7 +183,7 @@
             src="/assets/hero.jpg"
             alt=""
             width="1920"
-            height="1080"
+            height="1238"
             fetchpriority="high"
           />
         </div>
@@ -173,53 +191,95 @@
 
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="label scroll-in">Florida · Windows &amp; Doors</p>
+            <a class="season-chip scroll-in" href="#storm-ready" data-season-chip>
+              <span class="season-dot" aria-hidden="true"></span>
+              <span data-season-chip-text>Hurricane season runs June 1 – Nov 30</span>
+            </a>
             <h1 id="hero-heading" class="hero-title">
               <span class="line scroll-in" style="--i: 1">Transform</span>
-              <span class="line scroll-in" style="--i: 2">your space.</span>
+              <span class="line scroll-in" style="--i: 2">your <em>space.</em></span>
             </h1>
             <p class="hero-lead scroll-in" style="--i: 3">
               Cutting-edge products. Personalized service. 30+ years of combined
               industry experience from founders who pick up the phone.
             </p>
             <div class="hero-actions scroll-in" style="--i: 4">
-              <a class="btn btn-primary" href="#contact">Get a free estimate</a>
-              <a class="btn btn-outline" href="tel:8135280895">(813) 528-0895</a>
+              <a class="btn btn-primary btn-lg" href="#contact">
+                Get a free estimate
+                <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </a>
+              <a class="btn btn-outline btn-lg" href="tel:8135280895">
+                <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                (813) 528-0895
+              </a>
             </div>
+            <ul class="hero-trust scroll-in" style="--i: 5">
+              <li>Free, no-pressure estimates</li>
+              <li>A founder on every project</li>
+              <li>Residential &amp; commercial</li>
+            </ul>
           </div>
 
-          <aside class="hero-metrics scroll-in" style="--i: 5" aria-label="Company highlights">
+          <aside class="hero-metrics scroll-in" style="--i: 6" aria-label="Company highlights">
             <div class="metric">
-              <span class="metric-value" data-count="30">30+</span>
-              <span class="metric-label">Years experience</span>
+              <span class="metric-value"><span data-count-to="30">30</span>+</span>
+              <span class="metric-label">Years combined experience</span>
             </div>
             <div class="metric">
-              <span class="metric-value">10+</span>
-              <span class="metric-label">Brand partners</span>
+              <span class="metric-value"><span data-count-to="10">10</span>+</span>
+              <span class="metric-label">Manufacturer partners</span>
             </div>
             <div class="metric">
-              <span class="metric-value">FL</span>
-              <span class="metric-label">Residential &amp; commercial</span>
+              <span class="metric-value"><span data-count-to="2">2</span></span>
+              <span class="metric-label">Founders, no call center</span>
             </div>
           </aside>
         </div>
 
-        <div class="scroll-cue" aria-hidden="true">
+        <a class="scroll-cue" href="#about" aria-label="Scroll to About">
           <span>Scroll</span>
-          <span class="scroll-cue-line"></span>
+          <span class="scroll-cue-line" aria-hidden="true"></span>
+        </a>
+      </section>
+
+      <section class="logo-strip" aria-label="Manufacturers we install">
+        <div class="container logo-strip-inner">
+          <p class="logo-strip-label">Windows &amp; doors from the brands Florida trusts</p>
+          <div class="partner-marquee">
+            <div class="partner-track">
+              <a class="partner-link" href="brands/pgt.html" title="PGT Custom Windows &amp; Doors"><img src="/assets/partners/pgt.png" alt="PGT Industries" loading="lazy" /></a>
+              <a class="partner-link" href="brands/es-windows.html" title="ES Windows"><img src="/assets/partners/eswindows.png" alt="ES Windows" loading="lazy" /></a>
+              <a class="partner-link" href="brands/cgi.html" title="CGI Windows &amp; Doors"><img src="/assets/partners/cgi.jpg" alt="CGI" loading="lazy" /></a>
+              <a class="partner-link" href="brands/jeld-wen.html" title="JELD-WEN"><img src="/assets/partners/jeldwen.jpg" alt="Jeld-Wen" loading="lazy" /></a>
+              <a class="partner-link" href="brands/viwinco.html" title="Viwinco"><img src="/assets/partners/viwinco.png" alt="Viwinco" loading="lazy" /></a>
+              <a class="partner-link" href="brands/origin.html" title="Origin"><img src="/assets/partners/origin.webp" alt="Origin" loading="lazy" /></a>
+              <a class="partner-link" href="brands/windoor.html" title="WinDoor"><img src="/assets/partners/windoor.png" alt="WinDoor" loading="lazy" /></a>
+              <a class="partner-link" href="brands/cws.html" title="CWS"><img src="/assets/partners/cws.png" alt="CWS" loading="lazy" /></a>
+              <a class="partner-link" href="brands/euro-wall.html" title="Euro-Wall"><img src="/assets/partners/eurowall.jpg" alt="Euro Wall" loading="lazy" /></a>
+              <a class="partner-link" href="brands/pgt.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/pgt.png" alt="" loading="lazy" /></a>
+              <a class="partner-link" href="brands/es-windows.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/eswindows.png" alt="" loading="lazy" /></a>
+              <a class="partner-link" href="brands/cgi.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/cgi.jpg" alt="" loading="lazy" /></a>
+              <a class="partner-link" href="brands/jeld-wen.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/jeldwen.jpg" alt="" loading="lazy" /></a>
+              <a class="partner-link" href="brands/viwinco.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/viwinco.png" alt="" loading="lazy" /></a>
+              <a class="partner-link" href="brands/origin.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/origin.webp" alt="" loading="lazy" /></a>
+              <a class="partner-link" href="brands/windoor.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/windoor.png" alt="" loading="lazy" /></a>
+              <a class="partner-link" href="brands/cws.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/cws.png" alt="" loading="lazy" /></a>
+              <a class="partner-link" href="brands/euro-wall.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/eurowall.jpg" alt="" loading="lazy" /></a>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="section about" id="about" aria-labelledby="about-heading">
         <div class="container section-shell">
           <header class="section-intro scroll-reveal">
-            <p class="label">01 — Who we are</p>
+            <p class="label">Who we are</p>
             <h2 id="about-heading">Built on experience.<br />Driven by vision.</h2>
           </header>
 
           <div class="about-layout">
             <div class="about-copy scroll-reveal">
-              <p>
+              <p class="about-lead">
                 AOA Window Solutions LLC was founded by <strong>Eric Butler</strong> and
                 <strong>Trey Orbik</strong> with one goal: become Florida's leading provider
                 of high-quality windows and doors.
@@ -236,6 +296,29 @@
                 <li class="scroll-reveal" style="--i: 2">Founders on every project — no call center</li>
                 <li class="scroll-reveal" style="--i: 3">Free estimates, honest guidance</li>
               </ul>
+
+              <div class="founders-panel scroll-reveal">
+                <a class="founder-card" href="tel:8135280895">
+                  <span class="avatar" aria-hidden="true">EB</span>
+                  <span class="founder-meta">
+                    <span class="founder-name">Eric Butler</span>
+                    <span class="founder-role">Founder · (813) 528-0895</span>
+                  </span>
+                  <span class="founder-call" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                  </span>
+                </a>
+                <a class="founder-card" href="tel:8123205232">
+                  <span class="avatar" aria-hidden="true">TO</span>
+                  <span class="founder-meta">
+                    <span class="founder-name">Trey Orbik</span>
+                    <span class="founder-role">Founder · (812) 320-5232</span>
+                  </span>
+                  <span class="founder-call" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                  </span>
+                </a>
+              </div>
             </div>
 
             <div class="about-media scroll-reveal">
@@ -243,33 +326,26 @@
                 <img
                   src="/assets/about.jpg"
                   alt="Modern home with large windows overlooking water"
-                  width="720"
-                  height="900"
+                  width="1545"
+                  height="800"
                   loading="lazy"
                 />
               </div>
-              <div class="founders-panel scroll-reveal">
-                <p class="label">Founders</p>
-                <div class="founder-row">
-                  <span>Eric Butler</span>
-                  <a href="tel:8135280895">(813) 528-0895</a>
-                </div>
-                <div class="founder-row">
-                  <span>Trey Orbik</span>
-                  <a href="tel:8123205232">(812) 320-5232</a>
-                </div>
-              </div>
+              <p class="media-caption">
+                <span class="media-caption-num">30+</span>
+                years of combined industry experience behind every recommendation.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section products" id="products" aria-labelledby="products-heading">
+      <section class="section services section--alt" id="services" aria-labelledby="services-heading">
         <div class="container section-shell">
           <header class="section-intro section-intro--row scroll-reveal">
             <div>
-              <p class="label">02 — What we offer</p>
-              <h2 id="products-heading">Products built<br />for Florida.</h2>
+              <p class="label">What we offer</p>
+              <h2 id="services-heading">Products built<br />for Florida.</h2>
             </div>
             <p class="section-desc">
               Impact-rated windows to elegant entry systems — sourced from industry-leading
@@ -278,45 +354,71 @@
           </header>
         </div>
 
-        <div class="product-rail" data-product-rail>
+        <div class="product-rail">
           <article class="product-panel scroll-reveal" style="--i: 0">
-            <span class="product-index">01</span>
+            <span class="product-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1" /><path d="M12 3v18M4 12h16" /></svg>
+            </span>
             <h3>Replacement Windows</h3>
             <p>
               Precision-fit replacements that upgrade comfort, efficiency, and curb appeal
               for Florida's climate.
             </p>
+            <a class="product-link" href="#contact" data-prefill="Windows">
+              Estimate my windows
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
           </article>
           <article class="product-panel scroll-reveal" style="--i: 1">
-            <span class="product-index">02</span>
+            <span class="product-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 21h18M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17" /><path d="M14.5 12.5h.01" /></svg>
+            </span>
             <h3>Entry &amp; Patio Doors</h3>
             <p>
               Sliding, French, and impact-rated door systems that connect indoor and outdoor
               living.
             </p>
+            <a class="product-link" href="#contact" data-prefill="Doors">
+              Estimate my doors
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
           </article>
           <article class="product-panel scroll-reveal" style="--i: 2">
-            <span class="product-index">03</span>
+            <span class="product-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16M16 9h2a2 2 0 0 1 2 2v10M9 7h3M9 11h3M9 15h3" /></svg>
+            </span>
             <h3>Commercial Solutions</h3>
             <p>
               Large-scale fenestration for builders, property managers, and commercial clients.
             </p>
+            <a class="product-link" href="#contact" data-prefill="Commercial">
+              Talk commercial
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
           </article>
           <article class="product-panel scroll-reveal" style="--i: 3">
-            <span class="product-index">04</span>
+            <span class="product-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 12 2 2 4-4" /></svg>
+            </span>
             <h3>Impact &amp; Hurricane Rated</h3>
             <p>
               Protection when it matters most — without sacrificing the look of your property.
             </p>
+            <a class="product-link" href="#contact" data-prefill="Impact upgrade">
+              Plan an impact upgrade
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
           </article>
         </div>
       </section>
 
       <section class="section process" id="process" aria-labelledby="process-heading">
         <div class="container section-shell">
-          <header class="section-intro scroll-reveal">
-            <p class="label">How we work</p>
-            <h2 id="process-heading">Founder-led from<br />estimate to install.</h2>
+          <header class="section-intro section-intro--row scroll-reveal">
+            <div>
+              <p class="label">How we work</p>
+              <h2 id="process-heading">Founder-led from<br />estimate to install.</h2>
+            </div>
             <p class="section-desc">
               No call center. No runaround. Eric and Trey guide your project from the first
               conversation through completion.
@@ -347,16 +449,20 @@
         </div>
       </section>
 
-      <section class="section gallery-section" id="gallery" aria-labelledby="gallery-heading">
+      <section class="section gallery-section section--alt" id="projects" aria-labelledby="gallery-heading">
         <div class="container section-shell">
           <header class="section-intro section-intro--row scroll-reveal">
             <div>
               <p class="label">Our work</p>
               <h2 id="gallery-heading">Projects across<br />Florida.</h2>
             </div>
-            <p class="section-desc">
-              Placeholder portfolio — swap in Eric and Trey's project photos after the meeting.
-            </p>
+            <div>
+              <p class="section-desc">
+                Waterfront retrofits, glass walls, and commercial packages — matched to the right
+                manufacturer for every opening.
+              </p>
+              <p class="draft-note">Draft · placeholder photos until Eric &amp; Trey's projects are added</p>
+            </div>
           </header>
           <div class="gallery-filters scroll-reveal" data-gallery-filters role="toolbar" aria-label="Filter projects">
             <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
@@ -365,22 +471,53 @@
             <button type="button" class="filter-btn" data-filter="impact" aria-pressed="false">Impact</button>
             <button type="button" class="filter-btn" data-filter="doors" aria-pressed="false">Doors</button>
           </div>
-          <div class="gallery-grid" data-gallery-grid></div>
+          <div class="gallery-grid" data-gallery-grid aria-live="polite"></div>
         </div>
       </section>
 
-      <section class="section hurricane" id="hurricane" aria-labelledby="hurricane-heading">
-        <div class="container section-shell hurricane-layout">
-          <header class="section-intro scroll-reveal">
-            <p class="label">Florida expertise</p>
-            <h2 id="hurricane-heading">Built for hurricane country.</h2>
+      <section class="section storm" id="storm-ready" aria-labelledby="storm-heading">
+        <div class="container section-shell">
+          <header class="section-intro section-intro--row scroll-reveal">
+            <div>
+              <p class="label">Storm-ready</p>
+              <h2 id="storm-heading">Built for<br />hurricane country.</h2>
+            </div>
             <p class="section-desc">
               Florida building codes exist because windows fail first in a storm. We help you
               understand what's required — and what's worth the investment.
             </p>
           </header>
-          <div class="hurricane-cards scroll-reveal">
-            <article class="hurricane-card">
+
+          <div class="season-card scroll-reveal" data-season>
+            <div class="season-head">
+              <div>
+                <p class="season-kicker">Atlantic hurricane season · June 1 – November 30</p>
+                <p class="season-status" data-season-status>
+                  Plan upgrades before storms return — off-season installs mean you're protected on day one.
+                </p>
+              </div>
+              <a class="btn btn-outline btn-sm" href="#contact">Book before the next storm</a>
+            </div>
+            <div class="season-chart" aria-hidden="true">
+              <div class="season-track">
+                <span class="season-band"></span>
+                <span class="season-peak"></span>
+                <span class="season-today" data-season-today hidden><span>Today</span></span>
+              </div>
+              <div class="season-months">
+                <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+                <span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+              </div>
+            </div>
+            <ul class="season-legend">
+              <li><span class="swatch swatch--season"></span>Hurricane season</li>
+              <li><span class="swatch swatch--peak"></span>Peak activity, mid-Aug – late Oct</li>
+            </ul>
+          </div>
+
+          <div class="hurricane-cards">
+            <article class="hurricane-card scroll-reveal" style="--i: 0">
+              <span class="hurricane-card-tag">Code</span>
               <h3>HVHZ &amp; Miami-Dade</h3>
               <p>
                 The High Velocity Hurricane Zone covers Miami-Dade and Broward. Products here
@@ -390,7 +527,8 @@
                 <a href="brands/cws.html">CWS</a> lines rated for HVHZ.
               </p>
             </article>
-            <article class="hurricane-card">
+            <article class="hurricane-card scroll-reveal" style="--i: 1">
+              <span class="hurricane-card-tag">Glass</span>
               <h3>Impact vs. non-impact</h3>
               <p>
                 Impact-rated glass uses laminated layers that hold together when struck by debris.
@@ -398,97 +536,147 @@
                 you don't need.
               </p>
             </article>
-            <article class="hurricane-card">
+            <article class="hurricane-card hurricane-card--cta scroll-reveal" style="--i: 2">
+              <span class="hurricane-card-tag">Guide</span>
               <h3>Learn more</h3>
               <p>
                 Read our full guide on choosing hurricane-rated windows and doors for your
                 Florida property.
               </p>
-              <a class="btn btn-outline" href="hurricane-impact-windows.html">Impact windows guide</a>
+              <a class="btn btn-outline btn-sm" href="hurricane-impact-windows.html">Impact windows guide</a>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section service-area" id="service-area" aria-labelledby="service-heading">
+      <section class="section brands-section section--alt" id="brands" aria-labelledby="brands-heading">
         <div class="container section-shell">
-          <header class="section-intro scroll-reveal">
-            <p class="label">Where we work</p>
-            <h2 id="service-heading" data-service-headline></h2>
-            <p class="section-desc" data-service-subhead></p>
-          </header>
-          <div class="service-area-grid" data-service-area></div>
-          <p class="service-area-note scroll-reveal" data-service-note></p>
-        </div>
-      </section>
-
-      <section class="section partners" id="partners" aria-labelledby="partners-heading">
-        <div class="container section-shell">
-          <header class="section-intro scroll-reveal">
-            <p class="label">03 — Trusted manufacturers</p>
-            <h2 id="partners-heading">Brands we stand behind.</h2>
+          <header class="section-intro section-intro--row scroll-reveal">
+            <div>
+              <p class="label">Trusted manufacturers</p>
+              <h2 id="brands-heading">Brands we<br />stand behind.</h2>
+            </div>
             <p class="section-desc">
               Proven partners so every installation meets the standard your property deserves.
-              Click any logo to read the full brand profile.
+              Open any brand for its full profile.
             </p>
           </header>
-
-          <div class="partner-marquee scroll-reveal" aria-label="Partner brand logos">
-            <div class="partner-track">
-              <a class="partner-link" href="brands/pgt.html" title="PGT Custom Windows &amp; Doors"><img src="/assets/partners/pgt.png" alt="PGT Industries" loading="lazy" /></a>
-              <a class="partner-link" href="brands/es-windows.html" title="ES Windows"><img src="/assets/partners/eswindows.png" alt="ES Windows" loading="lazy" /></a>
-              <a class="partner-link" href="brands/cgi.html" title="CGI Windows &amp; Doors"><img src="/assets/partners/cgi.jpg" alt="CGI" loading="lazy" /></a>
-              <a class="partner-link" href="brands/jeld-wen.html" title="JELD-WEN"><img src="/assets/partners/jeldwen.jpg" alt="Jeld-Wen" loading="lazy" /></a>
-              <a class="partner-link" href="brands/viwinco.html" title="Viwinco"><img src="/assets/partners/viwinco.png" alt="Viwinco" loading="lazy" /></a>
-              <a class="partner-link" href="brands/origin.html" title="Origin"><img src="/assets/partners/origin.webp" alt="Origin" loading="lazy" /></a>
-              <a class="partner-link" href="brands/windoor.html" title="WinDoor"><img src="/assets/partners/windoor.png" alt="WinDoor" loading="lazy" /></a>
-              <a class="partner-link" href="brands/cws.html" title="CWS"><img src="/assets/partners/cws.png" alt="CWS" loading="lazy" /></a>
-              <a class="partner-link" href="brands/euro-wall.html" title="Euro-Wall"><img src="/assets/partners/eurowall.jpg" alt="Euro Wall" loading="lazy" /></a>
-              <a class="partner-link" href="brands/pgt.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/pgt.png" alt="" loading="lazy" /></a>
-              <a class="partner-link" href="brands/es-windows.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/eswindows.png" alt="" loading="lazy" /></a>
-              <a class="partner-link" href="brands/cgi.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/cgi.jpg" alt="" loading="lazy" /></a>
-              <a class="partner-link" href="brands/jeld-wen.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/jeldwen.jpg" alt="" loading="lazy" /></a>
-              <a class="partner-link" href="brands/viwinco.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/viwinco.png" alt="" loading="lazy" /></a>
-              <a class="partner-link" href="brands/origin.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/origin.webp" alt="" loading="lazy" /></a>
-              <a class="partner-link" href="brands/windoor.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/windoor.png" alt="" loading="lazy" /></a>
-              <a class="partner-link" href="brands/cws.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/cws.png" alt="" loading="lazy" /></a>
-              <a class="partner-link" href="brands/euro-wall.html" aria-hidden="true" tabindex="-1"><img src="/assets/partners/eurowall.jpg" alt="" loading="lazy" /></a>
-            </div>
-          </div>
+          <div class="brand-grid" data-brand-grid></div>
         </div>
       </section>
 
       <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-heading">
         <div class="container section-shell">
-          <header class="section-intro scroll-reveal">
-            <p class="label">Client feedback</p>
-            <h2 id="testimonials-heading">What clients say.</h2>
-            <p class="section-desc">Sample reviews for the draft — replace with real quotes from Eric and Trey.</p>
-          </header>
-          <div class="testimonial-carousel scroll-reveal">
-            <button type="button" class="carousel-btn" data-testimonial-prev aria-label="Previous review">←</button>
-            <div class="testimonial-viewport">
-              <div class="testimonial-track" data-testimonial-track></div>
+          <header class="section-intro section-intro--row scroll-reveal">
+            <div>
+              <p class="label">Client feedback</p>
+              <h2 id="testimonials-heading">What clients say.</h2>
             </div>
-            <button type="button" class="carousel-btn" data-testimonial-next aria-label="Next review">→</button>
-          </div>
+            <div class="testimonial-controls">
+              <p class="draft-note">Draft · sample reviews to replace with real quotes</p>
+              <div class="carousel-buttons">
+                <button type="button" class="carousel-btn" data-testimonial-prev aria-label="Previous review">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6" /></svg>
+                </button>
+                <button type="button" class="carousel-btn" data-testimonial-next aria-label="Next review">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </button>
+              </div>
+            </div>
+          </header>
+          <div class="testimonial-track scroll-reveal" data-testimonial-track tabindex="0" aria-label="Client reviews"></div>
+          <div class="carousel-dots" data-testimonial-dots></div>
         </div>
       </section>
 
-      <section class="section faq" id="faq" aria-labelledby="faq-heading">
-        <div class="container section-shell faq-shell">
+      <section class="section faq section--alt" id="faq" aria-labelledby="faq-heading">
+        <div class="container faq-layout">
           <header class="section-intro scroll-reveal">
             <p class="label">FAQ</p>
             <h2 id="faq-heading">Common questions.</h2>
+            <p class="section-desc">
+              Still unsure? Call Eric at <a href="tel:8135280895">(813) 528-0895</a> or Trey at
+              <a href="tel:8123205232">(812) 320-5232</a>.
+            </p>
           </header>
           <div class="faq-list" data-faq-list></div>
         </div>
       </section>
 
-      <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <section class="section service-area" id="service-area" aria-labelledby="service-heading">
+        <div class="container section-shell">
+          <header class="section-intro section-intro--row scroll-reveal">
+            <div>
+              <p class="label">Where we work</p>
+              <h2 id="service-heading" data-service-headline>Florida-wide, founder-led.</h2>
+            </div>
+            <p class="section-desc">
+              <span data-service-subhead></span>
+              Tap your county to run a quick storm-code check.
+            </p>
+          </header>
+
+          <div class="area-layout">
+            <div class="area-regions">
+              <div class="service-area-grid" data-service-area></div>
+              <p class="service-area-note scroll-reveal">
+                <span data-service-note></span>
+                <button type="button" class="text-btn" data-county-other>Check another county</button>
+              </p>
+            </div>
+
+            <aside class="planner scroll-reveal" data-planner aria-labelledby="planner-heading">
+              <div class="planner-head">
+                <p class="label">Storm-code check</p>
+                <h3 id="planner-heading">What does your project need?</h3>
+              </div>
+
+              <form class="planner-form" data-planner-form>
+                <div class="planner-field">
+                  <label for="planner-county">County</label>
+                  <select id="planner-county" name="county" data-planner-county>
+                    <option value="">Choose your county…</option>
+                  </select>
+                </div>
+                <fieldset class="planner-field">
+                  <legend>Property</legend>
+                  <div class="segmented">
+                    <label><input type="radio" name="property" value="home" checked /><span>Home</span></label>
+                    <label><input type="radio" name="property" value="business" /><span>Business</span></label>
+                  </div>
+                </fieldset>
+                <fieldset class="planner-field">
+                  <legend>Replacing</legend>
+                  <div class="segmented">
+                    <label><input type="radio" name="need" value="windows" checked /><span>Windows</span></label>
+                    <label><input type="radio" name="need" value="doors" /><span>Doors</span></label>
+                    <label><input type="radio" name="need" value="both" /><span>Both</span></label>
+                  </div>
+                </fieldset>
+                <div class="planner-field">
+                  <label for="planner-openings">Openings</label>
+                  <div class="stepper">
+                    <button type="button" data-step="-1" aria-label="Fewer openings">−</button>
+                    <input id="planner-openings" name="openings" type="number" min="1" max="99" value="8" inputmode="numeric" />
+                    <button type="button" data-step="1" aria-label="More openings">+</button>
+                  </div>
+                </div>
+              </form>
+
+              <div class="planner-result" data-planner-result aria-live="polite">
+                <p class="planner-placeholder">
+                  Choose a county to see your code zone and the brands we'd start with.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact section--alt" id="contact" aria-labelledby="contact-heading">
         <div class="container section-shell contact-shell">
           <header class="section-intro scroll-reveal">
-            <p class="label">04 — Contact</p>
+            <p class="label">Contact</p>
             <h2 id="contact-heading">Start your project.</h2>
             <p class="section-desc">
               Tell us what you need — we'll follow up with a free estimate. Or call Eric or
@@ -498,77 +686,194 @@
 
           <div class="contact-layout">
             <div class="contact-details scroll-reveal">
-              <div class="detail-block">
-                <span class="detail-label">Eric Butler</span>
-                <a class="detail-value" href="tel:8135280895">(813) 528-0895</a>
-              </div>
-              <div class="detail-block">
-                <span class="detail-label">Trey Orbik</span>
-                <a class="detail-value" href="tel:8123205232">(812) 320-5232</a>
-              </div>
+              <a class="founder-card founder-card--lg" href="tel:8135280895">
+                <span class="avatar" aria-hidden="true">EB</span>
+                <span class="founder-meta">
+                  <span class="detail-label">Eric Butler</span>
+                  <span class="detail-value">(813) 528-0895</span>
+                </span>
+                <span class="founder-call" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                </span>
+              </a>
+              <a class="founder-card founder-card--lg" href="tel:8123205232">
+                <span class="avatar" aria-hidden="true">TO</span>
+                <span class="founder-meta">
+                  <span class="detail-label">Trey Orbik</span>
+                  <span class="detail-value">(812) 320-5232</span>
+                </span>
+                <span class="founder-call" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                </span>
+              </a>
               <div class="detail-block">
                 <span class="detail-label">Hours</span>
                 <span class="detail-value">Mon–Fri · 9:00 AM – 5:00 PM</span>
+                <span class="open-status" data-open-status hidden></span>
               </div>
+              <ul class="contact-promises">
+                <li>Free, no-obligation estimate</li>
+                <li>Reply within 1 business day</li>
+                <li>Honest advice on what your code zone requires</li>
+              </ul>
             </div>
 
-            <form class="contact-form scroll-reveal" id="estimate-form">
-              <h3 class="form-heading">Free estimate</h3>
-              <div class="field">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" autocomplete="name" required />
+            <div class="contact-form-wrap scroll-reveal">
+              <form class="contact-form" id="estimate-form" novalidate>
+                <div class="form-head">
+                  <h3 class="form-heading">Request a free estimate</h3>
+                  <p class="form-sub">Takes about a minute. A founder — not a call center — replies.</p>
+                </div>
+                <p class="form-prefill-note" data-prefill-note hidden></p>
+                <div class="field-row">
+                  <div class="field">
+                    <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+                    <input id="name" name="name" type="text" autocomplete="name" required />
+                  </div>
+                  <div class="field">
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" />
+                  </div>
+                </div>
+                <div class="field-row">
+                  <div class="field">
+                    <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                    <input id="email" name="email" type="email" autocomplete="email" required />
+                  </div>
+                  <div class="field">
+                    <label for="location">City or ZIP</label>
+                    <input id="location" name="location" type="text" autocomplete="address-level2" />
+                  </div>
+                </div>
+                <fieldset class="field">
+                  <legend>What's the project?</legend>
+                  <div class="chip-group">
+                    <label class="chip"><input type="checkbox" name="project" value="Windows" /><span>Windows</span></label>
+                    <label class="chip"><input type="checkbox" name="project" value="Doors" /><span>Doors</span></label>
+                    <label class="chip"><input type="checkbox" name="project" value="Impact upgrade" /><span>Impact upgrade</span></label>
+                    <label class="chip"><input type="checkbox" name="project" value="Commercial" /><span>Commercial</span></label>
+                  </div>
+                </fieldset>
+                <div class="field">
+                  <label for="timeline">Timeline</label>
+                  <select id="timeline" name="timeline">
+                    <option value="">Select a timeline…</option>
+                    <option>As soon as possible</option>
+                    <option>Within 3 months</option>
+                    <option>3–6 months</option>
+                    <option>Just researching</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="message">Details</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Number of windows or doors, property type, anything we should know…"
+                  ></textarea>
+                </div>
+                <input class="hp-field" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+                <div class="form-actions">
+                  <button class="btn btn-primary btn-full btn-lg" type="submit">Request free estimate</button>
+                  <p class="form-note">Your details are only used to follow up on your project.</p>
+                </div>
+              </form>
+
+              <div class="form-success" data-form-success hidden tabindex="-1">
+                <span class="form-success-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg>
+                </span>
+                <h3 data-form-success-title>Thanks — we've got it.</h3>
+                <p>Eric or Trey will follow up within 1 business day. Need us sooner? Call Eric at
+                  <a href="tel:8135280895">(813) 528-0895</a>.</p>
+                <button type="button" class="btn btn-outline btn-sm" data-form-reset>Send another request</button>
               </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" autocomplete="email" required />
-              </div>
-              <div class="field">
-                <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  placeholder="Windows, doors, timeline, property type…"
-                ></textarea>
-              </div>
-              <div class="form-actions">
-                <button class="btn btn-primary btn-full" type="submit">Send message</button>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <img
-          class="footer-logo"
-          src="/assets/logo.svg"
-          alt="AOA Window Solutions LLC"
-          width="32"
-          height="32"
-          loading="lazy"
-        />
-        <p>&copy; 2026 AOA Window Solutions LLC</p>
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="AOA Window Solutions home">
+            <img src="/assets/logo.svg" alt="" width="36" height="36" class="brand-icon" data-logo loading="lazy" />
+            <span class="brand-text"><strong>AOA</strong><small>Window Solutions</small></span>
+          </a>
+          <p>Premium windows and doors for Florida homes and businesses — founder-led from estimate to install.</p>
+          <a class="btn btn-primary btn-sm" href="#contact">Free estimate</a>
+        </div>
+        <nav class="footer-col" aria-label="Footer">
+          <p class="footer-heading">Explore</p>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#storm-ready">Storm-ready</a>
+          <a href="#faq">FAQ</a>
+          <a href="hurricane-impact-windows.html">Impact windows guide</a>
+        </nav>
+        <nav class="footer-col" aria-label="Brands">
+          <p class="footer-heading">Brands</p>
+          <a href="brands/pgt.html">PGT</a>
+          <a href="brands/es-windows.html">ES Windows</a>
+          <a href="brands/cgi.html">CGI</a>
+          <a href="brands/jeld-wen.html">JELD-WEN</a>
+          <a href="brands/viwinco.html">Viwinco</a>
+          <a href="brands/origin.html">Origin</a>
+          <a href="brands/windoor.html">WinDoor</a>
+          <a href="brands/cws.html">CWS</a>
+          <a href="brands/euro-wall.html">Euro-Wall</a>
+        </nav>
+        <div class="footer-col">
+          <p class="footer-heading">Talk to a founder</p>
+          <a href="tel:8135280895">Eric Butler · (813) 528-0895</a>
+          <a href="tel:8123205232">Trey Orbik · (812) 320-5232</a>
+          <p>Mon–Fri · 9 AM – 5 PM ET</p>
+          <p>Serving homeowners, builders &amp; commercial clients across Florida</p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; <span data-year>2026</span> AOA Window Solutions LLC</p>
         <p class="footer-note">Website redesign — draft for client review</p>
+        <a class="footer-top" href="#top">
+          Back to top
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
+        </a>
       </div>
     </footer>
 
     <div class="lightbox" data-lightbox hidden role="dialog" aria-modal="true" aria-label="Project image">
-      <button type="button" class="lightbox-close" data-lightbox-close aria-label="Close">×</button>
+      <button type="button" class="lightbox-close" data-lightbox-close aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
+      </button>
+      <button type="button" class="lightbox-nav lightbox-nav--prev" data-lightbox-prev aria-label="Previous project">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6" /></svg>
+      </button>
       <figure class="lightbox-inner">
-        <img src="" alt="" data-lightbox-img />
+        <img alt="" data-lightbox-img />
         <figcaption>
-          <h3 data-lightbox-title></h3>
-          <p data-lightbox-location></p>
-          <a href="#" data-lightbox-brand></a>
+          <div>
+            <h3 data-lightbox-title></h3>
+            <p data-lightbox-location></p>
+          </div>
+          <div class="lightbox-meta">
+            <a href="#" data-lightbox-brand></a>
+            <span class="lightbox-count" data-lightbox-count></span>
+          </div>
         </figcaption>
       </figure>
+      <button type="button" class="lightbox-nav lightbox-nav--next" data-lightbox-next aria-label="Next project">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+      </button>
     </div>
 
     <aside class="mobile-cta" data-mobile-cta aria-label="Quick contact">
-      <a class="btn btn-outline mobile-cta-call" href="tel:8135280895">Call</a>
+      <a class="btn btn-outline mobile-cta-call" href="tel:8135280895">
+        <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+        Call
+      </a>
       <a class="btn btn-primary mobile-cta-estimate" href="#contact">Free Estimate</a>
     </aside>
 

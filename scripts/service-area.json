@@ -1,5 +1,5 @@
 {
-  "headline": "Serving Florida homeowners, builders, and commercial clients.",
+  "headline": "Florida-wide, founder-led.",
   "subhead": "Residential projects across Central and West Florida. Commercial and high-rise work statewide.",
   "regions": [
     {
@@ -23,5 +23,9 @@
       "areas": ["Miami-Dade", "Broward", "Palm Beach", "Monroe"]
     }
   ],
-  "note": "Don't see your county? Call us — we evaluate projects statewide, especially commercial and builder partnerships."
+  "codeZones": {
+    "hvhz": ["Miami-Dade", "Broward"],
+    "inland": ["Orange", "Osceola", "Seminole", "Polk"]
+  },
+  "note": "Don't see your county? We evaluate projects statewide — especially commercial and builder partnerships."
 }
